@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire</title>
+  </head>
+  <body>
+    <h1 class="titre">Formulaire d’inscription</h1>
+    <form name="formulaire-inscription" action="valide.html" method="post">
+      <div>
+        <!-- Nom-Prenom-Age-->
+        <label for="prenom">Prenom</label>
+        <input type="text" name="Prénom" id="prenom" />
+        <br />
+        <label for="nom">Nom</label>
+        <input type="text" name="Nom" id="nom" />
+        <br />
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age" min="0" max="100" required />
+      </div>
+      <!-- Fin de Nom-Prenom-Age-->
+      <br /><br />
+      <!-- Sexe-Email-Adresse-->
+      <h1 class="vous">Vous etes :</h1>
+      <div>
+        <input type="checkbox" id="H" name="Sexe" value="Sexe" />
+        <label for="H">Homme</label>
+      </div>
+      <div>
+        <input type="checkbox" id="F" />
+        <label for="F">Femme</label>
+      </div>
+      <div>
+        <input type="checkbox" id="Ng" />
+        <label for="Ng">Ne pas spécifier</label>
+      </div>
+      <br />
+
+      <div>
+        <label for="email">Adresse Mail</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <label for="adresse-postale">Adresse postale:</label>
+        <input
+          type="text"
+          id="adresse-postale"
+          name="adresse-postale"
+          placeholder="12345"
+          maxlength="5"
+        />
+      </div>
+
+      <!-- Fin de Sexe-Email-Adresse-->
+      <br />
+      <!-- Metier-Nationalite-date_naissance -->
+      <div>
+        <label for="choices">Métier exercé :</label>
+        <select id="choices" name="choices">
+          <option value="option1">Architecte</option>
+          <option value="option2">Chauffeur de taxi</option>
+          <option value="option3">Chef cuisinier</option>
+          <option value="option4">Coiffeur</option>
+          <option value="option5">Enseignant</option>
+          <option value="option6">Informaticien</option>
+          <option value="option7">Journaliste</option>
+          <option value="option8">Médecin</option>
+          <option value="option9">Photographe</option>
+          <option value="option10">Plombier</option>
+          <option value="option11">Autre</option>
+        </select>
+      </div>
+      <div>
+        <label for="nationalite">Nationalité :</label>
+        <select id="nationalite" name="nationalite">
+          <option value="francaise">Française</option>
+          <option value="espagnole">Espagnole</option>
+          <option value="allemande">Allemande</option>
+          <option value="italienne">Italienne</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+      <div>
+        <label for="date-naissance">Date de naissance :</label>
+        <input
+          type="date"
+          id="date-naissance"
+          name="date-naissance"
+          min="1970-01-01"
+          max="2005-01-01"
+        />
+      </div>
+      <!-- Fin de-Metier-Nationalite-date_naissance -->
+      <br />
+      <!-- Pays-num_sécu-num_passeport -->
+      <div>
+        <label for="pays-naissance">Pays de naissance :</label>
+        <select id="pays-naissance" name="pays-naissance">
+          <option value="france">France</option>
+          <option value="belgique">Belgique</option>
+          <option value="suisse">Suisse</option>
+          <option value="canada">Canada</option>
+          <option value="etats-unis">États-Unis</option>
+          <option value="mexique">Mexique</option>
+          <option value="bresil">Brésil</option>
+          <option value="argentine">Argentine</option>
+          <option value="chili">Chili</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+      <div>
+        <label for="num-securite-sociale">Numéro de sécurité sociale :</label>
+        <input
+          type="text"
+          id="num-securite-sociale"
+          name="num-securite-sociale"
+          placeholder="123-45-6789"
+          maxlength="11"
+        />
+      </div>
+      <div>
+        <label for="num-passeport">Numéro du passeport :</label>
+        <input
+          type="text"
+          id="num-passeport"
+          name="num-passeport"
+          placeholder="Ex : 123456789"
+          maxlength="15"
+        />
+      </div>
+      <!-- Fin de-Pays-num_sécu-num_passeport -->
+      <br />
+      <!-- Delivrance-Validite passeport -->
+      <div>
+        <label for="date-delivrance">Date de délivrance du passeport :</label>
+        <input type="date" id="date-delivrance" name="date-delivrance" />
+      </div>
+      <div>
+        <label for="date-validité">Date de validité du passeport</label>
+        <input type="date" id="date-validité" name="date-validité" />
+      </div>
+      <!-- Fin de -Delivrance-Validite passeport -->
+      <br /><br />
+      <div>
+        <input type="reset" value="Réinitialiser" />
+        <br />
+        <button type="submit">Enregistrer</button>
+      </div>
+    </form>
+    <link rel="stylesheet" href="styles.css" />
+  </body>
+</html>
